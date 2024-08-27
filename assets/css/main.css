@@ -1528,6 +1528,16 @@ section,
   color: #2c2c2c;
 }
 
-.hidden {
-  display: none;
-}
+/* Img and btn properties will be set by Javscript. When the timer runs out, the button and image will apear. */
+#img1{}
+#img2{}
+#img3{} 
+#img4{}
+#img5{}
+#img6{}
+#btn_1{}
+#btn_2{}
+#btn_3{}
+#btn_4{}
+#btn_5{}
+#btn_6{}

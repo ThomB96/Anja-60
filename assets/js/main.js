@@ -138,10 +138,12 @@
 //Timers voor het aftellen van de opdracthen
 document.addEventListener('DOMContentLoaded', function () {
   // Functie om afteltimer in te stellen
-  function setCountdown(elementId, imgId, targetDate) {
+  function setCountdown(elementId, imgId, btnId, targetDate) {
     const countDownDate = new Date(targetDate).getTime();
     const timerElement = document.getElementById(elementId);
     const imgElement = document.getElementById(imgId);
+    const imgStyle = document.getElementById(imgId).style;
+    const btnStyle = document.getElementById(btnId).style;
 
     const updateTimer = setInterval(function () {
       const now = new Date().getTime();
@@ -154,18 +156,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (distance < 0) {
         clearInterval(updateTimer);
-        timerElement.innerHTML = "Beschikbaar nu!";
+        timerElement.innerHTML = "";
         imgElement.classList.remove("hidden");
+        imgStyle.setProperty('display', 'hidden')
+        btnStyle.removeProperty('display')
       } else {
         timerElement.innerHTML = `Beschikbaar in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        imgStyle.setProperty('opacity', '1%')
+        btnStyle.setProperty('display', 'none')
       }
     }, 1000);
   }
 
   // Timer instellen voor elke opdracht
-  setCountdown('timer2', 'img2', '2024-08-18T09:00:00');
-  setCountdown('timer3', 'img3', '2024-08-18T09:00:00');
-  setCountdown('timer4', 'img4', '2024-09-05T09:00:00');
-  setCountdown('timer5', 'img5', '2024-09-12T09:00:00');
-  setCountdown('timer6', 'img6', '2024-09-19T09:00:00');
+  setCountdown('timer1', 'img1', 'btn_1',  '2024-08-26T09:00:00');
+  setCountdown('timer2', 'img2', 'btn_2', '2024-08-27T09:00:00');
+  setCountdown('timer3', 'img3', 'btn_3', '2024-08-30T09:00:00');
+  setCountdown('timer4', 'img4', 'btn_4', '2024-09-05T09:00:00');
+  setCountdown('timer5', 'img5', 'btn_5', '2024-09-12T09:00:00');
+  setCountdown('timer6', 'img6', 'btn_6', '2024-08-19T09:00:00');
 });
