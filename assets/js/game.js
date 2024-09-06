@@ -7,16 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const symbols = ['🍬', '🍭', '🍫', '🍡', '🍪'];
     let score = 0;
     let squares = [];
+    let selectedTile = null;
+    let symbolBeingDragged, symbolBeingReplaced;
+    let squareIdBeingDragged, squareIdBeingReplaced;
 
     // Create Board
     function createBoard() {
         for (let i = 0; i < width * width; i++) {
             const square = document.createElement('div');
-            square.setAttribute('draggable', true);
             square.setAttribute('id', i);
             let randomSymbol = Math.floor(Math.random() * symbols.length);
             square.innerHTML = symbols[randomSymbol];
             square.classList.add('tile');
+            square.addEventListener('click', handleClick);
             grid.appendChild(square);
             squares.push(square);
         }
@@ -24,63 +27,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createBoard();
 
-    // Drag and Drop Functions
-    let symbolBeingDragged;
-    let symbolBeingReplaced;
-    let squareIdBeingDragged;
-    let squareIdBeingReplaced;
-
-    squares.forEach(square => square.addEventListener('dragstart', dragStart));
-    squares.forEach(square => square.addEventListener('dragend', dragEnd));
-    squares.forEach(square => square.addEventListener('dragover', dragOver));
-    squares.forEach(square => square.addEventListener('dragenter', dragEnter));
-    squares.forEach(square => square.addEventListener('dragleave', dragLeave));
-    squares.forEach(square => square.addEventListener('drop', dragDrop));
-
-    function dragStart() {
-        symbolBeingDragged = this.innerHTML;
-        squareIdBeingDragged = parseInt(this.id);
-        this.classList.add('dragging');
-    }
-
-    function dragEnd() {
-        this.classList.remove('dragging');
-        let validMoves = [
-            squareIdBeingDragged - 1,
-            squareIdBeingDragged + 1,
-            squareIdBeingDragged - width,
-            squareIdBeingDragged + width
-        ];
-        let validMove = validMoves.includes(squareIdBeingReplaced);
-
-        if (squareIdBeingReplaced && validMove) {
-            squareIdBeingReplaced = null;
-            checkForMatches();
-        } else if (squareIdBeingReplaced && !validMove) {
-            squares[squareIdBeingReplaced].innerHTML = symbolBeingReplaced;
-            squares[squareIdBeingDragged].innerHTML = symbolBeingDragged;
+    // Handle tile click
+    function handleClick(e) {
+        if (selectedTile === null) {
+            selectedTile = e.target;
+            selectedTile.classList.add('selected');
+            symbolBeingDragged = selectedTile.innerHTML;
+            squareIdBeingDragged = parseInt(selectedTile.id);
         } else {
-            squares[squareIdBeingDragged].innerHTML = symbolBeingDragged;
+            let clickedTile = e.target;
+            squareIdBeingReplaced = parseInt(clickedTile.id);
+            symbolBeingReplaced = clickedTile.innerHTML;
+            // Check if the clicked tile is adjacent to the selected tile
+            const validMoves = [
+                squareIdBeingDragged - 1, squareIdBeingDragged + 1, 
+                squareIdBeingDragged - width, squareIdBeingDragged + width
+            ];
+            if (validMoves.includes(squareIdBeingReplaced)) {
+                // Swap the symbols
+                clickedTile.innerHTML = symbolBeingDragged;
+                selectedTile.innerHTML = symbolBeingReplaced;
+                // Check for matches
+                checkForMatches();
+            }
+            // Reset selection
+            selectedTile.classList.remove('selected');
+            selectedTile = null;
         }
-    }
-
-    function dragOver(e) {
-        e.preventDefault();
-    }
-
-    function dragEnter(e) {
-        e.preventDefault();
-    }
-
-    function dragLeave() {
-        this.style.backgroundColor = '';
-    }
-
-    function dragDrop() {
-        symbolBeingReplaced = this.innerHTML;
-        squareIdBeingReplaced = parseInt(this.id);
-        this.innerHTML = symbolBeingDragged;
-        squares[squareIdBeingDragged].innerHTML = symbolBeingReplaced;
     }
 
     // Check for Matches
@@ -160,8 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
         endGameButton.classList.add('hidden');
     });
 
+    // Check for matches at regular intervals
     window.setInterval(() => {
         checkForMatches();
     }, 100);
 });
-

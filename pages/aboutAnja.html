@@ -57,94 +57,7 @@
         flex: 1 1 200px;
     }
 </style> -->
-<style>
-    .gallery-wrapper {
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 15px;
-        position: relative;
-    }
-
-    .gallery {
-        display: inline-flex;
-        position: relative;
-        gap: 15px;
-        padding: 10px 0;
-        z-index: 0;
-    }
-
-    .gallery-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 8px;
-        flex: 0 0 auto; /* Prevent items from shrinking */
-    }
-
-    .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .gallery-item:hover img {
-        transform: scale(1.1);
-    }
-
-    .gallery-item {
-        width: 300px; /* Default width */
-    }
-
-    /* Specific classes for different sizes */
-    .gallery-item.large {
-        width: 600px;
-    }
-
-    .gallery-item.small {
-        width: 200px;
-    }
-    .gallery-wrapper::-webkit-scrollbar {
-        height: 8px;
-    }
-    
-    .gallery-wrapper::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-    }
-    
-    .gallery-wrapper::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 10px;
-    }
-    
-    .gallery-wrapper::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
-        /* Scrollbar stijl voor Firefox */
-        .gallery-wrapper {
-        scrollbar-color: #888 #f1f1f1;
-        scrollbar-width: thin;
-    }
-        /* Vervagingseffect aan de randen van de galerij */
-        .gallery-wrapper::before, .gallery-wrapper::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 50px;
-        z-index: 1;
-    }
-    
-    .gallery-wrapper::before {
-        left: 0;
-        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    }
-    
-    .gallery-wrapper::after {
-        right: 0;
-        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    }
-</style>
+<link rel="stylesheet" href="../assets/css/galary.css">
 
 </head>
 
@@ -157,10 +70,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="gallery.html" class="active">Gallery</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="aboutAnja.html">Over Anja</a></li>
         </ul>
       </nav>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -169,10 +79,9 @@
 
   <main class="container py-5">
     <section class="text-center mb-4">
-        <h1>Mijn Fotogalerij</h1>
-        <p>Hieronder vindt u een selectie van mijn favoriete foto's.</p>
+        <h1>Fotogalerij</h1>
+        <p>Foto's door de jaren heen.</p>
     </section>
-
     <section class="gallery">
         <!-- Voeg hier je afbeeldingen toe -->
         <div class="gallery-item">

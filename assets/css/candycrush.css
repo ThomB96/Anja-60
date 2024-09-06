@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 5px;
+    margin: 20px auto;
+    width: 320px;
+}
+.tile {
+    width: 60px;
+    height: 60px;
+    background-color: #ffcccb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+.tile.matched {
+    animation: fadeOut 0.5s forwards;
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+.hidden {
+    display: none;
+}
+#reward {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d4edda;
+    border: 2px solid #c3e6cb;
+    border-radius: 5px;
+    width: 300px;
+    margin: 20px auto;
+}
+#end-game {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.dragging {
+    transform: scale(1.2);
+    transition: transform 0.1s ease;
+}

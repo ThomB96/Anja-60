@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <!-- Favicons -->
+    <link href="../../assets/img/favicon.png" rel="icon">
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="../../assets/css/main.css" rel="stylesheet">
+
+    <style>
+        /* Additional Styles for the Sudoku game */
+        .sudoku-board {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            gap: 2px;
+            max-width: 100%;
+            width: 100%;
+            margin: 20px auto;
+            border: 3px solid #000;
+            border-radius: 10px;
+        }
+        .sudoku-cell {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 24px;
+            border: 1px solid #ddd;
+            box-sizing: border-box; /* To include padding in width/height */
+        }
+        .sudoku-cell input {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            border: none;
+            font-size: 24px;
+            font-family: inherit;
+            box-sizing: border-box; /* To include padding in width/height */
+        }
+        .sudoku-cell input:focus {
+            outline: 2px solid #007bff;
+        }
+        .sudoku-cell.fixed,
+        .sudoku-cell.correct {
+            background-color: #3df30bd5; /* Light gray for fixed and correct cells */
+        }
+        .sudoku-cell.error {
+            background-color: #f30404e2; /* Light red for errors */
+        }
+        .sudoku-board > .sudoku-cell:nth-child(27n+1),
+        .sudoku-board > .sudoku-cell:nth-child(27n+3) {
+            border-right: 3px solid #000;
+        }
+        .sudoku-board > .sudoku-cell:nth-child(-n+9),
+        .sudoku-board > .sudoku-cell:nth-child(n+73) {
+            border-bottom: 3px solid #000;
+        }
+        #check-solution {
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .sudoku-cell {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+            <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <i class="fa-solid fa-party-horn"></i>
+                <h1 class="sitename">Anja 60 jaar</h1>
+            </a>
+    
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="../index.html" class="active">Home</a></li>
+                    <li><a href="aboutAnja.html">Over Anja</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main id="main">
+        <!-- Intro Section -->
+        <section id="intro" class="intro">
+            <div class="container">
+                <h1>Sudoku game</h1>
+                <div class="d-flex p-2 justify-content-center">
+                    <p>Welkom bij de tweede opdracht; Sudoku! Probeer alle cijfers te ontrafelen waarna je een prijs ontvangt.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sudoku Board Section -->
+        <section id="game" class="game">
+            <div class="container">
+                <div class="sudoku-board">
+                    <!-- Sudoku board cells will be generated here by JavaScript -->
+                </div>
+                <button id="check-solution" class="btn btn-primary">Controleer oplossing</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="line"></div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../../assets/vendor/aos/aos.js"></script>
+    <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <!-- Sudoku JS Logic -->
+    <script>
+        const board = [
+            [5, 3, null, null, 7, null, null, null, null],
+            [6, null, null, 1, 9, 5, null, null, null],
+            [null, 9, 8, null, null, null, null, 6, null],
+            [8, null, null, null, 6, null, null, null, 3],
+            [4, null, null, 8, null, 3, null, null, 1],
+            [7, null, null, null, 2, null, null, null, 6],
+            [null, 6, null, null, null, null, 2, 8, null],
+            [null, null, null, 4, 1, 9, null, null, 5],
+            [null, null, null, null, 8, null, null, 7, 9]
+        ];
+
+        const boardElement = document.querySelector('.sudoku-board');
+
+        function createBoard() {
+            for (let row = 0; row < 9; row++) {
+                for (let col = 0; col < 9; col++) {
+                    const cellElement = document.createElement('div');
+                    cellElement.classList.add('sudoku-cell');
+
+                    const inputElement = document.createElement('input');
+                    inputElement.type = 'text';
+                    inputElement.maxLength = 1;
+
+                    if (board[row][col] !== null) {
+                        inputElement.value = board[row][col];
+                        inputElement.disabled = true;
+                        cellElement.classList.add('fixed');
+                    }
+
+                    inputElement.addEventListener('input', () => {
+                        validateInput(inputElement, row, col);
+                    });
+
+                    cellElement.appendChild(inputElement);
+                    boardElement.appendChild(cellElement);
+                }
+            }
+        }
+
+        function validateInput(inputElement, row, col) {
+            const value = parseInt(inputElement.value);
+            if (isNaN(value) || value < 1 || value > 9 || !isValid(row, col, value)) {
+                inputElement.classList.add('error');
+            } else {
+                inputElement.classList.remove('error');
+            }
+        }
+
+        function isValid(row, col, value) {
+            // Check row
+            for (let c = 0; c < 9; c++) {
+                if (board[row][c] === value) {
+                    return false;
+                }
+            }
+
+            // Check column
+            for (let r = 0; r < 9; r++) {
+                if (board[r][col] === value) {
+                    return false;
+                }
+            }
+
+            // Check 3x3 subgrid
+            const startRow = Math.floor(row / 3) * 3;
+            const startCol = Math.floor(col / 3) * 3;
+            for (let r = startRow; r < startRow + 3; r++) {
+                for (let c = startCol; c < startCol + 3; c++) {
+                    if (board[r][c] === value) {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        function checkSolution() {
+            const cells = document.querySelectorAll('.sudoku-cell input');
+            let isComplete = true;
+
+            cells.forEach((cell, index) => {
+                const row = Math.floor(index / 9);
+                const col = index % 9;
+                const value = parseInt(cell.value);
+
+                if (!isValid(row, col, value) || isNaN(value)) {
+                    cell.classList.add('error');
+                    isComplete = false;
+                } else {
+                    cell.classList.remove('error');
+                    if (board[row][col] === null) {
+                        cell.classList.add('correct');
+                        cell.disabled = true; // Lock the correct values
+                    }
+                }
+            });
+
+            if (isComplete) {
+                alert('Gefeliciteerd! Je hebt het Sudoku-spel opgelost!');
+            } else {
+                alert('Er zijn nog fouten in de oplossing. Controleer je invoer.');
+            }
+        }
+
+        document.getElementById('check-solution').addEventListener('click', checkSolution);
+
+        createBoard();
+    </script>
+</body>
+</html>
