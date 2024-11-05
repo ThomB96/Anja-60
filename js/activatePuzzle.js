@@ -1,0 +1,66 @@
+var options = {
+    solution: [
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, 'K', 'A', 'A', 'R', 'S', 'E', 'N', null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, 'R', null, null, 'P', null, 'V', null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, 'T', 'R', 'A', 'K', 'T', 'A', 'T', 'I', 'E', null, null, null, null, null, null, null, null, null, null],
+        [null, null, 'A', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, 'T', 'A', 'R', 'W', 'E', 'P', 'A', 'N', 'N', 'E', 'K', 'O', 'K', 'E', null, null, null, null, null],
+        [null, null, 'I', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, 'P', 'O', 'F', 'F', 'E', 'R', 'T', 'J', 'E', null, null, null, null, null, null, null, null, null, null],
+        [null, null, 'N', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, 'S', 'P', 'A', 'N', 'N', 'E', 'N', 'D', 'E', null, null, null, null, null, null, null, null, null, null],
+        [null, null, 'A', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, 'F', 'A', 'M', 'I', 'L', 'I', 'E', null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, 'N', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, 'S', 'N', 'A', 'C', 'K', null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, 'K', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    ],
+    index: [
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, 1, null, null, null, null, null, 2, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, 3, null, null, null, null, null, null, null, null, null, null, 10, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, 5, null, null, null, null, null, null, null, 6, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, 7, null, null, null, null, null, null, null],
+        [null, null, null, 8, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, 9, null, 4, null, 11, null, null, null, null, null, null],
+        [null, null, null, null, 12, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, 13, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    ],
+		         questions_across: [		"2. Tellen de jaren op een taart",
+											"4. Zoete drank",
+											"9. Vorm van knusheid",
+											"10. Uitreiken van lekkernijen",
+											"12. Geschenk",
+											"13. Met lucht gevulde bol",
+											"14. Zoute snack"],
+
+		         questions_down: [			"1. Cirkelvormig zoet baksel",
+											"2. Lekkernij van zuivelproduct",
+											"3. Maakt een feest compleet",
+											"5. Soort versiering",
+											"6. Warme drank",
+											"7. Geboorte vieringsdag",
+											"8. Spannende handeling",
+											"11. Verwanten"]
+
+		};
+
+
+		cwp_nmsp.activateCWP(document.getElementById("myPuzzle"),false,options);
