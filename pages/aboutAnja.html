@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Anja 60 jaar - Gallery</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- CSS voor het opmaken van de verschillende foto's -->
+  <!-- <style>
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .gallery-item {
+        flex: 1 1 300px; /* Adjusts to 300px minimum width, scales with screen */
+        max-width: 100%; /* Ensure images never exceed their original size */
+    }
+
+    /* You can create specific classes for different sizes if needed */
+    .gallery-item.large {
+        flex: 2 1 600px;
+    }
+
+    .gallery-item.small {
+        flex: 1 1 200px;
+    }
+</style> -->
+<link rel="stylesheet" href="../assets/css/galary.css">
+
+</head>
+
+<body>
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="logo">
+        <h1>Anja 60 jaar</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutAnja.html">Over Anja</a></li>
+        </ul>
+      </nav>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <section class="text-center mb-4">
+        <h1>Fotogalerij</h1>
+        <p>Foto's door de jaren heen.</p>
+    </section>
+    <section class="gallery">
+        <!-- Voeg hier je afbeeldingen toe -->
+        <div class="gallery-item">
+            <img src="../assets/img/gallery/anja/anja_Zakynthos.JPG" alt="Zakynthos">
+        </div>
+        <div class="gallery-item large">
+            <img src="../assets/img/gallery/anja/anjaJodyPortugal.jpg" alt="Albufeira">
+        </div>
+        <div class="gallery-item small">
+            <img src="../assets/img/gallery/anja/anjaNijmegen.jpg" alt="Nijmegen">
+        </div>
+        <div class="gallery-item">
+            <img src="../assets/img/gallery/anja/anjaSpanje.jpg" alt="Benitachell">
+        </div>
+        <div class="gallery-item large">
+            <img src="../assets/img/gallery/anja/familieKinderdijk.jpg" alt="Kinderdijk">
+        </div>
+        <div class="gallery-item small">
+            <img src="../assets/img/gallery/anja/anjaRadler.jpg" alt="zuiplap">
+        </div>
+        <!-- Herhaal voor meer afbeeldingen -->
+    </section>
+</main>
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/gallery.js"></script>
+</body>
+
+</html>
