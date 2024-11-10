@@ -163,11 +163,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Timer instellen voor elke opdracht
   setCountdown('timer1', 'img1', 'btn_1', '2024-11-11T09:00:00');
-  setCountdown('timer2', 'img2', 'btn_2', '2024-11-18T09:00:00');
-  setCountdown('timer3', 'img3', 'btn_3', '2024-11-25T09:00:00');
-  setCountdown('timer4', 'img4', 'btn_4', '2024-12-02T09:00:00');
-  setCountdown('timer5', 'img5', 'btn_5', '2024-12-09T09:00:00');
-  setCountdown('timer6', 'img6', 'btn_6', '2024-12-16T09:00:00');
+  setCountdown('timer2', 'img2', 'btn_2', '2024-11-18T14:00:00');
+  setCountdown('timer3', 'img3', 'btn_3', '2024-11-25T14:00:00');
+  setCountdown('timer4', 'img4', 'btn_4', '2024-12-02T14:00:00');
+  setCountdown('timer5', 'img5', 'btn_5', '2024-12-09T14:00:00');
+  setCountdown('timer6', 'img6', 'btn_6', '2024-12-16T14:00:00');
 });
 
 function clikToExpandMainImage() {
