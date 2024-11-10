@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 1.5em;
+}
+
+.intro, .rebus-game {
+    margin: 20px auto;
+}
+
+#rebus-image-container {
+    margin-top: 20px;
+}
+
+#rebus-image {
+    max-width: 80%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#rebus-answer {
+    font-size: 1.2em;
+    padding: 10px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+#check-answer {
+    font-size: 1.2em;
+    padding: 10px 20px;
+}
+
+#feedback-message {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: green;
+}
+
+.hidden {
+    display: none;
+}

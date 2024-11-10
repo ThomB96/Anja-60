@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <!-- Favicons -->
+    <link href="../../assets/img/favicon.png" rel="icon">
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../vendor/aos/aos.css" rel="stylesheet">
+    <link href="../../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="../../assets/css/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://mczak.com/code/sudoku/js/sudoku2.js"></script>
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../../assets/css/sudoku.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+            <a href="../../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <i class="fa-solid fa-party-horn"></i>
+                <h1 class="sitename">Anja 60 jaar</h1>
+            </a>
+    
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="../../index.html" class="active">Home</a></li>
+                    <li><a href="../aboutAnja.html">Over Anja</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section>
+     <div class="wrap">
+		
+        <!--show candidates toggle-->
+        <!-- <label for="toggleCandidates">Show candidates </label> -->
+        <!-- <input id="toggleCandidates" class="js-candidate-toggle" type="checkbox"/> -->
+        <!--generate board buttons-->
+        New:
+        <button type="button" class="sudokubutton1 js-generate-board-btn--easy">Easy</button>
+        <button type="button" class="sudokubutton2 js-generate-board-btn--medium">Medium</button>
+        
+        <!--the only required html-->
+        <div id="sudoku" class="sudoku-board">
+        </div>
+        
+        <!--solve buttons-->
+        Solve: <button type="button" class="sudokubutton5 js-solve-step-btn">One Step</button>
+        <button type="button-copmlete" class="sudokubutton-check js-check-sudoku-btn hidden" id="rewardButton">Controleer antwoorden</button>
+        <!-- <button type="button" class="sudokubutton6 js-solve-all-btn">All</button> -->
+        <br>
+        <!--clear board btn-->
+        <!-- Clear: <button type="button" class="sudokubutton7 js-clear-board-btn">Board</button> -->
+        </div>
+    </section>
+        <section id="reward-section" class="reward-section hidden">
+            <div class="container">
+                <div id="reward" class="">
+                    <h2>Gefeliciteerd!</h2>
+                    <p>Goed gedaan, je hebt het woord geraden. <br>
+                        We hebben jouw cadeau op een bepaalde plek gelegd. Zie je al waar dit is?</p>
+                        <img class="reward-image" src="../../assets/img/gallery/anja/anja-60jaar.JPG" alt="Prijs">
+                        <p id="hintReward">Kom je er niet uit? Vraag dan om een hint in de groepsapp!</p>
+                </div>
+            </div>
+        </section>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="line"></div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../vendor/php-email-form/validate.js"></script>
+    <script src="../../vendor/aos/aos.js"></script>
+    <script src="../../vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <!-- Sudoku JS Logic -->
+     <script src="../../assets/js/sudoku.js"></script>
+</body>
+</html>

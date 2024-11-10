@@ -1,0 +1,106 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="561.796875" height="109" font-size="24" text-anchor="middle">
+  <style>
+    @font-face { 
+     font-family: 'noto'; 
+     src: url("https://cdn.rawgit.com/googlei18n/noto-emoji/master/fonts/NotoColorEmoji.ttf"); format('truetype');
+     font-weight: 400; 
+     font-style: normal; 
+   }
+  </style>
+  <filter id="shadow" x="0" y="0" width="200%" height="200%">
+    <feDropShadow dx="3" dy="3" stdDeviation="1" flood-color="#aaaaaa" flood-opacity="1" />
+  </filter>
+  
+   <rect x="0" y="18" rx="10" ry="10" width="68.40625" height="85" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="135.828125" height="85" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="135.828125" height="103" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="92.375" y="36" rx="10" ry="10" width="26.5" height="67" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="68.40625" height="85" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="26.5" height="67" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="142.84375" y="0" rx="10" ry="10" width="68.40625" height="103" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="68.40625" height="103" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="68.40625" height="103" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="235.21875" y="18" rx="10" ry="10" width="68.40625" height="85" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="68.40625" height="85" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="68.40625" height="85" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="327.59375" y="0" rx="10" ry="10" width="135.828125" height="103" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="135.828125" height="103" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="135.828125" height="103" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="487.390625" y="18" rx="10" ry="10" width="68.40625" height="85" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="68.40625" height="103" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+   <rect x="-1005" y="-6" rx="10" ry="10" width="68.40625" height="103" style="fill:#f0f3f5;" filter="url(#shadow)" />
+  
+  <text fill="#000000" font-size="40px" font-family="Noto" x="34.203125" y="66">🎩</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="34.203125" y="93">d=ra</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-970.796875" y="42">🎩</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="69">-d</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-903.375" y="42">🪟</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-903.375" y="69">-am</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-970.796875" y="42">🎩</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="69">-d</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-903.375" y="42">🚋</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-903.375" y="69">-t</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-903.375" y="87">-m</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="105.625" y="84">,</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-970.796875" y="42">🔪</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="69">mes=,</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-991.75" y="42">,</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="177.046875" y="48">🪕</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="177.046875" y="75">-b</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="177.046875" y="93">o=a</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-970.796875" y="42">🛶</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="69">-k</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="87">o=ja</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-970.796875" y="42">🦙</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="69">-l</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="87">m=nj</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="269.421875" y="66">🐠</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="269.421875" y="93">-v</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-970.796875" y="42">🍦</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="69">-j</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-970.796875" y="42">🧊</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="69">-j</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="361.796875" y="48">🪺</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="361.796875" y="75">n=z</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="429.21875" y="48">🦉</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="429.21875" y="75">-u</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="429.21875" y="93">l=g</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-970.796875" y="42">🪺</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="69">n=z</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-903.375" y="42">💊</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-903.375" y="69">-p</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-903.375" y="87">l=g</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-970.796875" y="42">🔪</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="69">m=z</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-903.375" y="42">💍</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-903.375" y="69">r=t</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-903.375" y="87">-n</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="521.59375" y="66">🦰</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="521.59375" y="93">h=j</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-970.796875" y="42">👢</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="69">l=j</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="87">-s</text>
+<text fill="#000000" font-size="40px" font-family="Noto" x="-970.796875" y="42">🟣</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="69">p=j</text>
+<text fill="#000000" font-size="18px" font-family="Arial" x="-970.796875" y="87">-s</text>
+     
+</svg>
+ 
