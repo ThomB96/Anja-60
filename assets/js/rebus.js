@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Update to the next rebus
                 rebusImageElement.src = rebusImages[currentRebus];
             } else {
-                feedbackMessage.innerHTML = "<strong>Gefeliciteerd!</strong> Je hebt alle rebussen opgelost!";
+                feedbackMessage.innerHTML = "<strong>Gefeliciteerd!</strong> Je hebt alle rebussen opgelost! <br><img src=../../assets/img/opdrachten/rewards/Reward3-min.JPG id=rewardImage>";
                 feedbackMessage.style.color = "green";
                 checkButton.disabled = true;
             }
