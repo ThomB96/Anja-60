@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rekenspel</title>
+    <title>Klikspel</title>
         <!-- Favicons -->
         <link href="../../assets/img/favicon.png" rel="icon">
         <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -22,38 +22,70 @@
         <!--Main CSS-->
         <link rel="stylesheet" href="../../assets/css/main.css">
         <!--Custom CSS-->
-        <link rel="stylesheet" href="../../assets/css/rekenspel.css">
+        <link rel="stylesheet" href="../../assets/css/klikSpel.css">
     </head>
-    <body>
+<body>
+        <!-- Header Section -->
+        <header id="header" class="header d-flex align-items-center sticky-top">
+            <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+                <a href="../../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                    <i class="fa-solid fa-party-horn"></i>
+                    <h1 class="sitename">Anja 60 jaar</h1>
+                </a>
         
-            <p>Test je rekenvaardigheden en beantwoord de vragen binnen de tijd!</p>
-            <header id="header" class="header d-flex align-items-center sticky-top">
-                <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-                    <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                        <i class="fa-solid fa-party-horn"></i>
-                        <h1>Rekenspel</h1>
-                    </a>
-            
-                    <nav id="navmenu" class="navmenu">
-                        <ul>
-                            <li><a href="../../index.html" class="active">Home</a></li>
-                            <li><a href="../../about.html">Over Anja</a></li>
-                        </ul>
-                        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-                    </nav>
-                </div>
-            </header>
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="../../index.html" class="active">Home</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+            </div>
         </header>
-    
-        <div class="game-container">
-            <div class="timer" id="timer">Tijd: 60</div>
-            <div class="question" id="question">Vraag komt hier</div>
-            <input type="number" id="answer" placeholder="Jouw antwoord" autofocus>
-            <button class="btn" onclick="submitAnswer()">Antwoord indienen</button>
-            <div class="result" id="result"></div>
+    <div class="container text-center mt-5">
+        <div class="mb-4 header2">
+            <h1 class="display-3 fw-bold text-primary">Tikken om te winnen</h1>
+            <p class="lead text-secondary">Klik zoveel mogelijk binnen 10 seconden en versla de target!</p>
         </div>
-    
-        <img id="final-image" src="../../assets/img/gallery/anja/anja-60jaar.JPG" alt="Gefeliciteerd!" width="300">
+
+        <!-- Target Display -->
+        <div class="mb-4" id="targetBox">
+            <p class="fs-4" id="targetText">Huidige target: <span id="target-display" class="text-danger fw-bold">100</span></p>
+        </div>
+
+        <!-- Spel Controls -->
+         <div class="row" id="containerGame">
+            <div class="d-flex flex-column align-items-center">
+            <!-- Startknop -->
+            <button id="start-button" class="btn btn-success btn-lg mb-3">Start Spel</button>
+
+            <!-- Spelcontainer -->
+            <div id="game-container" class="text-center">
+                <button id="click-button" class="btn btn-primary btn-lg rounded-circle p-4 shadow-lg" disabled>
+                    Klik!
+                </button>
+                <div class="d-flex justify-content-around align-items-center mt-4 w-50">
+                    <!-- Klikken -->
+                    <p id="click-count" class="fs-3 text-warning fw-bold">Klikken: 0</p>
+                    <!-- Tijd -->
+                    <p id="timer" class="fs-3 text-danger fw-bold">Tijd: 10s</p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Hidden Reward -->
+        <div id="reward" class="reward hidden mt-5 p-4 rounded bg-light shadow">
+            <h2 class="text-success">Gefeliciteerd!</h2>
+            <p class="text-secondary">Je hebt je target gehaald met <span id="final-score" class="fw-bold"></span> klikken!</p>
+            <img class="reward-image img-fluid rounded shadow" src="https://via.placeholder.com/300" alt="Prijs">
+        </div>
+
+        <!-- Hidden Verliesboodschap -->
+        <div id="lost" class="lost hidden mt-5 p-4 rounded bg-light shadow">
+            <h2 class="text-danger">Helaas!</h2>
+            <p class="text-secondary">Je hebt de target niet gehaald. De nieuwe target is nu lager!</p>
+        </div>
+    </div>
     
 
 
@@ -72,6 +104,6 @@
     <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="../../assets/js/main.js"></script>
     <!--Custom JS-->
-    <script src="../../assets/js/rekenspel.js"></script>
+    <script src="../../assets/js/klikSpel.js"></script>
     </body>
 </html>

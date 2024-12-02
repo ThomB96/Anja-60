@@ -22,26 +22,46 @@
         <!--Main CSS-->
         <link rel="stylesheet" href="../../assets/css/main.css">
         <!--Custom CSS-->
-        <link rel="stylesheet" href="../../assets/css/crossword.css">
+        <link rel="stylesheet" href="../../assets/css/raadGetal.css">
 </head>
 <body>
-    <header>
-        <h1>Kruiswoordpuzzel</h1>
-        <p>Los de puzzel op door de juiste woorden in te vullen!</p>
+    <header id="header" class="header container-fluid sticky-top">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+            <a href="../../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <i class="fa-solid fa-party-horn"></i>
+                <h1 class="sitename">Anja 60 jaar</h1>
+            </a>
+    
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="../../index.html" class="active">Home</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
     </header>
-
-    
-    <h2 align="center" class="cwp_h2_main">Crossword Puzzle</h2>
-    <div id="myPuzzle"></div>
-    
-
-
-    <!-- Scroll Top Button -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Preloader
-    <div id="preloader">
-        <div class="line"></div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div id="game-container" class="col-6 text-center">
+                <h1 class="mb-4">Raad het getal</h1>
+                    <p class="lead mb-4">Raad het juiste getal tussen 1 en 100!</p>
+                    <input type="number" id="guess-input" class="form-control mb-3" placeholder="Voer je gok in">
+                    <button id="guess-button" class="btn">Gok</button>
+                <p id="feedback"></p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <!-- Hidden Reward -->
+    <div class="container">
+        <div id="reward" class="hidden">
+            <h2>Gefeliciteerd!</h2>
+            <p>Goed gedaan, je hebt het juiste getal geraden. <br>
+                We hebben jouw cadeau op een bepaalde plek gelegd. Zie je al waar dit is?</p>
+            <img class="reward-image" src="../../assets/img/opdrachten/rewards/Reward4-min.JPG" alt="Prijs">
+            <p id="hintReward">Kom je er niet uit? Vraag dan om een hint in de groepsapp!</p>
+        </div>
     </div>
 
     <script src="../../assets/js/galgje.js"></script>
@@ -51,8 +71,8 @@
     <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="../../assets/js/main.js"></script>
+
     <!--Custom JS-->
-    <script src="../../assets/js/crossword.js"></script>
-    <script src="../../assets/js/activatePuzzle.js"></script>
+    <script src="../../assets/js/raadGetal.js"></script>
 </body>
 </html>

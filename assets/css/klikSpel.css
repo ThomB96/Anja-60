@@ -1,0 +1,60 @@
+.hidden {
+    display: none;
+}
+
+#game-container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+#click-button {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.1s ease-in-out;
+}
+
+#click-button:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+#timer, #click-count {
+    font-size: 1.8rem;
+}
+
+.reward, .lost {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.reward-image {
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+}
+.header2{
+    align-content: center;
+    margin-left: auto;
+}
+#targetBox{
+    justify-content: center;
+    margin-left: auto;
+    
+}
+#containerGame{
+    margin-left: auto;
+}
